@@ -8,7 +8,7 @@
 .game {
     height: 100vh;
     overflow: hidden;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
 }
@@ -201,7 +201,7 @@ i {
     width: 100vw;
     height: 100vh;
     position: relative;
-    display: none;
+    display: flex;
 }
 .bgn img{
     width: 100%;
