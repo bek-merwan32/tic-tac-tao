@@ -1,0 +1,221 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.game {
+    height: 100vh;
+    overflow: hidden;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+.play {
+    height: 80%;
+    background: rgb(165, 165, 165);
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.play.active {
+    background: #3DB2FF;
+}
+.play.act {
+    background: #FF2442;
+}
+.play div {
+    font-size: 30px;
+}
+.bt {
+    position: absolute;
+    bottom: 10px;
+    display: none;
+    width: 150px;
+    height: 70px;
+    position: absolute;
+    bottom: 10px;
+    outline: none;
+    border: 1px solid #FF2442;
+    background: #3DB2FF;
+    border-radius: 20px;
+    color:#FF2442 ;
+    font-size: 25px;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+}
+.bt:hover {
+    border: 1px solid #FF2442;
+    color:#3DB2FF ;
+    background: #FF2442;
+}
+.win {
+    position: absolute;
+    width: 5px;
+    height: 80%;
+    background: black;
+    display: none;
+}
+.box {
+   width: 500px;
+   height: 500px;
+   position: relative;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-wrap: wrap;
+}
+
+.box .btn {
+    width: calc(33% - 2px);
+    height: 33.33%;
+    border: 1px solid rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 150px;
+    cursor: pointer;
+}
+
+.box .btn:first-child {
+    border-color: white black black white;
+}
+.box .btn:nth-child(2) {
+    border-color: white black black ;
+}
+.box .btn:nth-child(3) {
+    border-color: white  white black black;
+}
+.box .btn:nth-child(4) {
+    border-color:  black black black white;
+}
+
+.box .btn:nth-child(6) {
+    border-color: black white black black ;
+}
+.box .btn:nth-child(7) {
+    border-color:  black black white white ;
+}
+.box .btn:nth-child(8) {
+    border-color:  black black white black;
+}
+.box .btn:nth-child(9) {
+    border-color: black white white black ;
+}
+
+
+.names{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(-45deg,rgb(194, 21, 224),rgb(11, 238, 227));
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0%;
+}
+.names .container {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+.names .container .box {
+    width: 250px;
+    height: 350px;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 50px;
+    background: linear-gradient(20deg,rgba(255, 255, 255, 0.13),rgba(255, 255, 255, 0.363));
+    border: 2px solid rgba(255, 255, 255, 0.418);
+    border-radius: 10px;
+}
+i {
+    font-size: 150px;
+    color: #88FFF7;
+    margin-bottom: 20px;
+}
+.game i {
+    color: white;
+}
+
+.names .container .box input {
+    outline: none;
+    width: 80%;
+    height: 50px;
+    font-size: 20px;
+    padding: 5px;
+    border: 2px solid rgba(255, 255, 255, 0.418);
+    border-radius: 5px;
+}
+.names button {
+    width: 130px;
+    height: 50px;
+    display: flex;
+    border: 2px solid #f9f9fa44;
+    background: transparent;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 600;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+.names a{
+    text-decoration: none;
+}
+.names button:hover {
+    background: #f9f9fa44;
+}
+
+.bgn {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+.bgn img{
+    width: 100%;
+    height: 100%;
+}
+.bgn button  {
+    width: 150px;
+    height: 70px;
+    position: absolute;
+    bottom: 10px;
+    right: 100px;
+    outline: none;
+    border: 1px solid #88FFF7;
+    background: #7DEDFF;
+    border-radius: 20px;
+    color:#e77979 ;
+    font-size: 25px;
+    cursor: pointer;
+}
+.bgn button:hover {
+    background: #30ddd1;
+}
+@media (max-width : 900px){
+    .game {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .play {
+        width: 80%;
+        height: 15%;
+        flex-direction: row;
+        gap: 20px;
+    }
+    .box {
+        width: 300px;
+        height: 300px;
+    }
+    .box .btn {
+        font-size: 50px;
+    }
+ }
