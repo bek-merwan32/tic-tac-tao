@@ -66,24 +66,24 @@ if (( btns[0].innerText == btns[1].innerText && btns[0].innerText == btns[2].inn
 tt ){
     finish = true ;
     document.querySelector('.bt').style.display="flex";
-    if (( btns[0].innerText == btns[1].innerText && btns[0].innerText == btns[2].innerText && btns[0].innerText == 'x') ||
-    ( btns[0].innerText == btns[3].innerText && btns[0].innerText == btns[6].innerText && btns[0].innerText == 'x') ||
-    ( btns[0].innerText == btns[4].innerText && btns[0].innerText == btns[8].innerText && btns[0].innerText == 'x') ||
-    ( btns[3].innerText == btns[4].innerText && btns[3].innerText == btns[5].innerText && btns[3].innerText == 'x') ||
-    ( btns[6].innerText == btns[7].innerText && btns[6].innerText == btns[8].innerText && btns[6].innerText == 'x') ||
-    ( btns[6].innerText == btns[4].innerText && btns[6].innerText == btns[2].innerText && btns[6].innerText == 'x') ||
-    ( btns[1].innerText == btns[4].innerText && btns[1].innerText == btns[7].innerText && btns[1].innerText == 'x') ||
-    ( btns[2].innerText == btns[5].innerText && btns[2].innerText == btns[8].innerText && btns[2].innerText == 'x')) {
+    if (( btns[0].innerText == btns[1].innerText && btns[0].innerText == btns[2].innerText && btns[0].innerText == '×') ||
+    ( btns[0].innerText == btns[3].innerText && btns[0].innerText == btns[6].innerText && btns[0].innerText == '×') ||
+    ( btns[0].innerText == btns[4].innerText && btns[0].innerText == btns[8].innerText && btns[0].innerText == '×') ||
+    ( btns[3].innerText == btns[4].innerText && btns[3].innerText == btns[5].innerText && btns[3].innerText == '×') ||
+    ( btns[6].innerText == btns[7].innerText && btns[6].innerText == btns[8].innerText && btns[6].innerText == '×') ||
+    ( btns[6].innerText == btns[4].innerText && btns[6].innerText == btns[2].innerText && btns[6].innerText == '×') ||
+    ( btns[1].innerText == btns[4].innerText && btns[1].innerText == btns[7].innerText && btns[1].innerText == '×') ||
+    ( btns[2].innerText == btns[5].innerText && btns[2].innerText == btns[8].innerText && btns[2].innerText == '×')) {
         win = 'x';
     }else if (!tt) {
         win = 'o';
     }
-
+    console.log(win);
     if (!tt) {
         if (win == 'x') {
                 scoreX++;
                document.querySelector('.scoreX').innerHTML =' '+ scoreX;
-        } else {
+        } else if (win == 'o'){
                 scoreO++;
                 document.querySelector('.scoreO').innerHTML = ' '+scoreO;
         }
